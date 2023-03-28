@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
- has_many :category
- has_many :categoryDetail
- validates :name, presence: true, length: { in: 1..50 }
+  has_many :category
+  has_many :categoryDetail
+  validates :name, presence: true, length: { in: 1..50 }
 end
