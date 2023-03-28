@@ -1,7 +1,6 @@
 class Category < ApplicationRecord
-  load_and_authorize_resource
-  belongs_to :users
-  has_many :categoryDetail
+  belongs_to :users, class_name: "User"
+  has_many :category_details
 
   validates :name, presence: true, length: { in: 1..50 }
   validates :icon, presence: true

@@ -1,2 +1,15 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<section class='category-container'>
+<% if @categories.blank? %>
+<p>There is no category to show , create one!</p>
+<% else %>
+<% @categories.each do |category| %>
+<div class='card-container'>
+<img src='<%= category.icon %>' alt='category icon' class='card-img'/>
+<div class='card-info'>
+<h4><%= category.name %></h4>
+</div>
+</div>
+<% end %>
+<%= link_to 'Add new category', new_category_path %>
+<% end %>
+</section>
