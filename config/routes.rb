@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   # get 'categories/index'
   root 'users#index'
   devise_for :users
-  resources :categories, only: [:index, :new, :create]
+  resources :categories, only: [:index, :new, :create, :destroy]
 end

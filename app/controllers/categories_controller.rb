@@ -24,6 +24,16 @@ class CategoriesController < ApplicationController
       end
     end
   end
+
+  def destroy 
+    @category = Category.find(params[:id])
+    if @category.destory
+      flash[:success] = 'category deleted successfully'
+      redirect_to categories_path
+    else 
+      flash.now[:error] = 'Error: category could not be delete'
+    end
+  end
  
   private
   def strong_params

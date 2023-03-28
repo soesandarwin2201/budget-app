@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
-  belongs_to :users, class_name: "User"
+  belongs_to :users, class_name: "User", foreign_key: 'users_id'
+  self.primary_key = 'users_id'
   has_many :category_details
 
   validates :name, presence: true, length: { in: 1..50 }

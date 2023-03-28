@@ -8,6 +8,9 @@
 <div class='card-info'>
 <h4><%= category.name %></h4>
 </div>
+<% if can? :destroy, category %>
+  <%= button_to "Delete", category_path(category), method: :delete, class: "btn" %>
+<% end %>
 </div>
 <% end %>
 <%= link_to 'Add new category', new_category_path %>
