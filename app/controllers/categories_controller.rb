@@ -3,6 +3,11 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+  def show 
+    @category = Category.find(params[:id])
+    # @category_details = @category.category_details.order(created_at: :desc)
+  end
+
   def new 
     @category = Category.new
     respond_to do |format|
