@@ -4,15 +4,15 @@
 <% else %>
 <% @categories.each do |category| %>
 <div class='card-container'>
-<img src='<%= category.icon %>' alt='category icon' class='card-img'/>
+<img src='<%= category.icon %>' alt='category icon' class='card-img' />
 <div class='card-info'>
-<h4><%= category.name %></h4>
+<h4><%= link_to category.name, {:action => 'show', :id => category.id } %></h4>
 </div>
 <% if can? :destroy, category %>
-  <%= button_to "Delete", category_path(category), method: :delete, class: "btn" %>
+  <%= button_to "Delete", category_path(category), method: :delete, class: "btn", data: { confirm: 'Are you sure?' } %>
 <% end %>
 </div>
 <% end %>
-<%= link_to 'Add new category', new_category_path %>
 <% end %>
+<%= link_to 'Add new category', new_category_path %>
 </section>
