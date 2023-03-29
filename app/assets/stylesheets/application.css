@@ -13,6 +13,7 @@
      --second-color: #5fb523;
      --text-color: #434b54;
      --white-color : #fff;
+     --box-shadow : rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
  }
 
  body{
@@ -23,6 +24,9 @@
      color: var(--text-color);
  }
 
+ a {
+     color: var(--main-color);
+ }
 
  .app-page {
      background-color:var(--white-color);
@@ -45,7 +49,6 @@
 
  .logo-text {
   font-size: .9rem;
-  padding: .3rem;
  }
 
  .btn-container {
@@ -60,4 +63,94 @@
      text-transform: capitalize;
      background-color: var(--main-color);
      color:var(--white-color);
+     border-radius: 5px;
+     box-shadow: var(--box-shadow);
+     transition: ease-in .4s;
  }
+
+ .btn:hover {
+     background-color: var(--white-color);
+     color: var(--text-color);
+     transform: translateY(-8px);
+ }
+
+.form-title {
+   text-align: center;
+   font-size: 2rem;
+   margin-top: 2rem;
+}
+
+.input-form {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+     border: none;
+     border-bottom: 2px solid black;
+     border-radius: 4px;
+     outline: none;
+}
+
+.signin-container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     height: auto;
+     flex-direction: column;
+     align-items: center;
+     color: black;
+     gap: 1rem;
+     letter-spacing: 0;
+}
+   
+.signin-container form {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin: 20px;
+     padding-top: 20px;
+     position: relative;
+     gap: 0.5rem;
+}
+
+.form-button {
+     background-color: #4caf50; /* Green */
+     border: none;
+     color: white;
+     padding: 16px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     transition-duration: 0.4s;
+     cursor: pointer;
+     width: 100%;
+     border-radius: 5px;
+}
+   
+.form-button:hover {
+     background-color: #4caf50;
+     color: white;
+}
+
+ @media only screen and (max-width: 600px) {
+     .app-page {
+       justify-content: space-between;
+     }
+
+     .app-logo {
+          font-size: 4rem;
+     }
+
+     .btn-container {
+          flex-direction: column;
+     }
+
+     .btn {
+          padding: 1rem 3.5rem;
+          font-size: 1.2rem;
+          font-weight: 800;
+          text-transform: capitalize;
+     }
+   }
