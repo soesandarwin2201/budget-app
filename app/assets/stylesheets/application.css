@@ -1,15 +1,63 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Roboto:ital,wght@1,300&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+ }
+
+ :root {
+     --main-color : #3778c2;
+     --second-color: #5fb523;
+     --text-color: #434b54;
+     --white-color : #fff;
+ }
+
+ body{
+     font-size: 1rem;
+     letter-spacing: 1.5;
+     line-height: 1.5;
+     font-family: 'Roboto', sans-serif;
+     color: var(--text-color);
+ }
+
+
+ .app-page {
+     background-color:var(--white-color);
+     color: var(--text-color);
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .app-logo {
+     margin-top: 5rem;
+     font-size: 3rem;
+     text-align: center;
+     letter-spacing: 1.5;
+     font-weight: 900;
+     font-family: 'Alkatra', cursive;
+ }
+
+ .logo-text {
+  font-size: .9rem;
+  padding: .3rem;
+ }
+
+ .btn-container {
+     margin: 1rem;
+     display: flex;
+     gap: 2rem;
+ }
+
+ .btn {
+     padding: 1rem 2rem;
+     font-size: .9rem;
+     text-transform: capitalize;
+     background-color: var(--main-color);
+     color:var(--white-color);
+ }

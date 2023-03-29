@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'category_details/index'
-  # get 'categories/index'
-  root 'users#index'
   devise_for :users
+  root 'splash#index'
+  # get 'users/index'
   resources :categories, only: [:index, :show, :new, :create, :destroy] do 
     resources :category_details, only: [:new, :create]
   end

@@ -1,4 +1,5 @@
 class CategoryDetailsController < ApplicationController
+  before_action: authenticate_user!
   def new
     @category = Category.find(params[:category_id])
     @category_detail = CategoryDetail.new
@@ -20,16 +21,6 @@ class CategoryDetailsController < ApplicationController
           render :new, locals: { category: @category, category_detail: @category_detail}
         end
       end
-    end
-  end
-
-  def destroy
-    @category_detail = CategoryDetail.find(params[:id])
-    if @category_detail.destroy
-      flash[:success] = 'Trancition deleted successfully!'
-      redirect_to  category_path
-    else 
-      flash.now[:error] = 'Error: Trancition could not be delete'
     end
   end
 
