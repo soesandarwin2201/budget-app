@@ -23,6 +23,16 @@ class CategoryDetailsController < ApplicationController
     end
   end
 
+  def destroy
+    @category_detail = CategoryDetail.find(params[:id])
+    if @category_detail.destroy
+      flash[:success] = 'Trancition deleted successfully!'
+      redirect_to  category_path
+    else 
+      flash.now[:error] = 'Error: Trancition could not be delete'
+    end
+  end
+
   private 
   def strong_params
     params.require(:transition).permit(:name, :amount, :categories_id)
