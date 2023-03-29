@@ -1,5 +1,5 @@
 class CategoryDetailsController < ApplicationController
-  before_action: authenticate_user!
+  before_action :authenticate_user!
   def new
     @category = Category.find(params[:category_id])
     @category_detail = CategoryDetail.new
