@@ -1,4 +1,5 @@
 <section class='category-detail-container'>
+<%= link_to 'Add new trancition', new_category_category_detail_path(@category) %>
 <h1> <%= @category.name %></h1>
 <img src='<%= @category.icon %>' alt='category icon' class='card-img' />
 <% @category.users.category_details.each do |detail|%>
