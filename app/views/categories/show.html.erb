@@ -13,4 +13,6 @@
 <h4 class='btn'>Total spent:$ <span> <%= @category.category_details.sum(:amount) %></span></h4>
 </div>
 <%= link_to 'Add new trancition', new_category_category_detail_path(@category), class:"btn" %>
+
+<%= link_to 'back', categories_path %>
 </section>
