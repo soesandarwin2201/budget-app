@@ -1,4 +1,4 @@
-<section class='food-form-container'>
+<section class='signin-container'>
 <h1>Add transition to the category</h1>
 <%= form_with url: category_category_details_path(categories_id: @category.id), scope: :transition do |form| %>
     <div class="form-div" >
@@ -20,7 +20,7 @@
     </div>
   <div class='form-item'>
     <div>
-    <%= form.submit "Add", class:"btn btn-primary form-control" %>
+    <%= form.submit "Add", class:"form-button" %>
     </div>
     </div>
   <%end%>

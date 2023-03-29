@@ -9,7 +9,7 @@ class CategoryDetailsController < ApplicationController
   end
 
   def create
-    @category_detail = CategoryDetail.new(strong_params.merge(author_id: current_user.id, categories_id: params[:category_id])) 
+    @category_detail = CategoryDetail.new(strong_params.merge(author_id: current_user.id, category_id: params[:category_id])) 
 # @category_detail.category = @category
     respond_to do |format|
       format.html do 
