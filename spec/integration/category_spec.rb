@@ -4,7 +4,9 @@ RSpec.describe 'Food Index', type: :system do
   before(:each) do
     @user = User.create(name: 'anye3', email: 'wolo22001@gmail.com', password: '2e2010510',
                         password_confirmation: '2e2010510')
-    @category = Category.create(user_id: @user.id, name: 'pizza',icon='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Qz_PXUP8Lsb3k6b6tTASlpGQYYCURKlmBA&usqp=CAU')
+
+    @category = Category.create(user_id: @user.id, name: 'pizza',
+                                icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Qz_PXUP8Lsb3k6b6tTASlpGQYYCURKlmBA&usqp=CAU')
   end
 
   it 'Sign up with a user' do
@@ -29,11 +31,11 @@ RSpec.describe 'Food Index', type: :system do
   end
 
   it 'add the category' do
-  visit new_category_path
-  fill_in 'name', with: 'pizza'
-  fill_in 'icon', with: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Qz_PXUP8Lsb3k6b6tTASlpGQYYCURKlmBA&usqp=CAU'
-  click_button 'Add category'
- expect(current_path).to eq(categories_path)
- expect(page).to have_text('Total spent:$')
-end
+    visit new_category_path
+    fill_in 'name', with: 'pizza'
+    fill_in 'icon', with: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Qz_PXUP8Lsb3k6b6tTASlpGQYYCURKlmBA&usqp=CAU'
+    click_button 'Add category'
+    expect(current_path).to eq(categories_path)
+    expect(page).to have_text('Total spent:$')
+  end
 end
