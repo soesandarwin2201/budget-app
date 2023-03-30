@@ -137,6 +137,8 @@ To run tests, run the following command:
   rspec ./spec/models/cateogry_details_spec.rb
   rspec ./spec/models/category_spec.rb
   rspec ./spec/models/user_spec.rb
+  rspec ./spec/integration/user_spec.rb
+  rspec ./spec/integration/category_spec.rb
 ```
 -
 
