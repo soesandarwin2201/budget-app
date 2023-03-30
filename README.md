@@ -134,7 +134,9 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec ./spec/models/cateogry_details_spec.rb
+  rspec ./spec/models/category_spec.rb
+  rspec ./spec/models/user_spec.rb
 ```
 -
 
