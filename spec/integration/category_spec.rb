@@ -28,4 +28,12 @@ RSpec.describe 'Food Index', type: :system do
     sleep(5)
   end
 
+  it 'add the category' do
+  visit new_category_path
+  fill_in 'name', with: 'pizza'
+  fill_in 'icon', with: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Qz_PXUP8Lsb3k6b6tTASlpGQYYCURKlmBA&usqp=CAU'
+  click_button 'Add category'
+ expect(current_path).to eq(categories_path)
+ expect(page).to have_text('Total spent:$')
+end
 end
