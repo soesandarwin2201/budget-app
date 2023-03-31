@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(strong_params.merge(users_id: current_user.id))
+    @category = Category.new(strong_params.merge(user_id: current_user.id))
     respond_to do |format|
       format.html do
         if @category.save!
