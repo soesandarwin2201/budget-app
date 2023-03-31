@@ -173,6 +173,7 @@ nav {
   gap: 3rem;
   background-color: var(--white-color);
   padding: 2rem;
+  justify-content: space-between;
 }
 
 .card-img {
@@ -185,17 +186,21 @@ nav {
   text-transform: capitalize;
 }
 
+.btn-mobile {
+  background-color: var(--second-color);
+  width: 100%;
+}
+
 .category-btn {
   margin-top: 2rem;
   padding: 1rem 2rem;
   font-size: 0.9rem;
   text-transform: capitalize;
-  background-color: var(--main-color);
   color: var(--white-color);
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   transition: ease-in 0.4s;
-  border: 0;
+  border: 1px solid #fff;
   outline: 0;
 }
 
