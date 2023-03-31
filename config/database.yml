@@ -16,9 +16,5 @@ test:
   password: koko23052020
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: budget_app_production
-  pool: 5
-  username: postgres
-  password: koko23052020
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
