@@ -1,7 +1,7 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: siris-budget-app
+    databaseName: budget_app_3pq3
+    user: budget_app_3pq3_user
 
 services:
   - type: web
