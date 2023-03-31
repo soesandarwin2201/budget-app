@@ -81,7 +81,10 @@
 
 > not yet
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://siris-budget-app-mobile.onrender.com/categories)
+
+## Project documentation 
+- [project documentation](https://www.loom.com/share/8e81c50bff084766811c1302ab349279)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,6 +148,7 @@ To run tests, run the following command:
 ### Deployment
 
 You can deploy this project using:
+- render
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
