@@ -85,12 +85,12 @@ nav {
   padding: 1rem 2rem;
   font-size: 0.9rem;
   text-transform: capitalize;
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   color: var(--white-color);
   border-radius: 5px;
   box-shadow: var(--box-shadow);
   transition: ease-in 0.4s;
-  border: 0;
+  border: 1px solid #fff;
   outline: 0;
 }
 
@@ -166,6 +166,7 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 .card-container {
@@ -187,8 +188,9 @@ nav {
 }
 
 .btn-mobile {
-  background-color: var(--second-color);
+  justify-content: flex-end;
   width: 100%;
+  height: 300px;
 }
 
 .category-btn {
@@ -277,6 +279,12 @@ nav {
   .category-name {
     font-size: 1rem;
     text-transform: capitalize;
+  }
+
+  .btn-mobile {
+    background-color: var(--second-color);
+    width: 100%;
+    padding: 3rem;
   }
 
   .show {
