@@ -6,8 +6,8 @@
 <div class='card-container'>
 <img src='<%= category.icon %>' alt='category icon' class='card-img' />
 <div class='card-info'>
-<h4 class='category-name'><%= link_to category.name, {:action => 'show', :id => category.id } %></h4>
-<p>Total spent:$ <span> <%= category.category_details.sum(:amount) %></span></p>
+<p class='category-name'><%= link_to category.name, {:action => 'show', :id => category.id } %></p>
+<p><%= category.created_at.strftime("%d %b %Y") %></p>
 </div>
 <% if can? :destroy, category %>
   <%= button_to "Delete", category_path(category), method: :delete, class: "category-btn", data: { confirm: 'Are you sure?' } %>
