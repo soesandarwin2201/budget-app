@@ -166,7 +166,7 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .card-container {
@@ -284,7 +284,7 @@ nav {
   .btn-mobile {
     background-color: var(--second-color);
     width: 100%;
-    padding: 3rem;
+    padding: 1rem;
   }
 
   .show {
