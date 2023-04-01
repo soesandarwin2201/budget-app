@@ -285,6 +285,7 @@ nav {
     background-color: var(--second-color);
     width: 100%;
     padding: 3rem;
+    height: 3rem;
   }
 
   .show {
