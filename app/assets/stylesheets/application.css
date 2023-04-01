@@ -281,12 +281,6 @@ nav {
     text-transform: capitalize;
   }
 
-  .btn-mobile {
-    background-color: var(--second-color);
-    width: 100%;
-    padding: 1rem;
-  }
-
   .show {
     width: 90vw;
   }
