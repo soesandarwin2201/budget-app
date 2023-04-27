@@ -1,0 +1,9 @@
+<nav class='navbar-container'>
+<ul class='nav-menu'>
+<% if user_signed_in? %>
+    <%= link_to 'Home', root_path , class:"none"%>
+    <%= link_to 'Edit', edit_user_registration_path , class:"none" %>
+    <%= link_to 'Sign out', destroy_user_session_path, 'data-turbo-method': :delete %>
+<% end %>
+</ul>
+</nav>
